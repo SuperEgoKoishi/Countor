@@ -4,10 +4,9 @@ def count_calls(func):
     def add_count(is_display=False):
         func()
         nonlocal count
+        count += 1
         if is_display:
             print("The function has been executed {} time(s)".format(count))
-        else:
-            count += 1
 
     return add_count
 
